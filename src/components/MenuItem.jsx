@@ -1,14 +1,12 @@
 import Link from "next/link";
 import React from "react";
 
-const menuItem = (title, address, Icon) => {
+export default function MenuItem({ title, address }) {
   return (
-    <div>
-      <Link>
-        <p className="">{title}</p>
-      </Link>
-    </div>
+    <Link href={address}>
+      <p className="uppercase hidden sm:inline text-sm text-amber-500 gap-4 ">
+        {title}
+      </p>
+    </Link>
   );
-};
-
-export default menuItem;
+}
